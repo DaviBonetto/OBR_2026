@@ -1,0 +1,19 @@
+Component,Quantity,Category,Critical Notes
+Raspberry Pi 5 8GB,1,Processing,Main Brain (Video Processing)
+Coral USB Accelerator,1,Processing,YOLOv8 Real-time Inference
+Arduino Nano,2,Processing,Offloading Motor Control & Sensors
+Raspberry Pi Camera Module 3 Wide,1,Vision,Primary Line/Obstacle Vision
+Arducam B0268,1,Vision,Secondary Vision (Stereo/Rear - Optional)
+Adafruit BNO055,2,Sensors,IMU (Ramp/Seesaw Stabilization)
+Pololu irs17a,6,Sensors,Line Sensors (High Precision Backup)
+Pololu irsl16a,1,Sensors,Line Sensor (T-Intersection)
+Pololu High Power Motors 12V,4,Actuators,Drive Train (High Torque)
+L298N or TB6612FNG,1,Actuators,Motor Driver
+Emax ES09MD Servo,5,Actuators,Arm Mechanism
+Diymore 35KG Servo,1,Actuators,Heavy Lifting (Victims)
+LiPo Battery 3S (11.1V 3800mAh),1,Power,Drive Train Power (Dirty Circuit)
+LiPo Battery 2S (7.4V 3800mAh),1,Power,Logic/Pi Power (Clean Circuit)
+XL4015 Step Down Converter,1,Power,Voltage Regulation
+XL6009 Step Up Converter,2,Power,Voltage Boost (12V Stability)
+7.0" IPS Touch-Display,1,Interface,Debug GUI
+revoART 12V COB LED-Strip,1m,Interface,Constant Lighting Environment

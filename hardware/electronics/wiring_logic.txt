@@ -1,0 +1,33 @@
+# OBR 2026 Power & Wiring Logic Schematic
+
+[BATTERY 1: DIRTY POWER - 3S LiPo 11.1V]
+    |
+    +--> [FUSE 20A] --> [MAIN SWITCH 1]
+                            |
+                            +--> [L298N/TB6612 Motor Driver Input 12V]
+                            |       |
+                            |       +--> [MOTORS 1-4]
+                            |
+                            +--> [XL4015 Step Down (Set to 6V/7V)] --> [SERVOS]
+
+[BATTERY 2: CLEAN POWER - 2S LiPo 7.4V]
+    |
+    +--> [FUSE 5A] --> [MAIN SWITCH 2]
+                            |
+                            +--> [XL4015 Step Down (Set to 5.1V)]
+                            |       |
+                            |       +--> [RASPBERRY PI 5 GPIO 5V PIN] (Bypasses USB-C limitation)
+                            |       |       |
+                            |       |       +--> [CORAL TPU] (USB 3.0 Power)
+                            |       |       +--> [ARDUINOS] (USB Power)
+                            |       |       +--> [SENSORS] (3.3V/5V Rails)
+                            |
+                            +--> [VOLTAGE MONITOR] --> [Arduino Analog Pin] (Low Battery Alarm)
+
+[GROUNDING LOGIC]
+    |
+    +--> ALL GNDs must be connected common (Star Ground) ONLY at the motor driver or a dedicated bus bar to define 0V reference without loop currents.
+
+[SAFETY]
+    |
+    +--> 2x Emergency Stop Buttons (One cuts Motor Power, One cuts Logic - Optional, usually just Motor)
